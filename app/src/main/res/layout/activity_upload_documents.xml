@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    android:background="#F5F6FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Privacy Info Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:elevation="4dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@drawable/privacy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your documents are safe and encrypted."
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <!-- Profile Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/imageUserProfile"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/profile"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_profile_bg"
+                    android:contentDescription="Profile" />
+
+                <LinearLayout
+                    android:layout_marginStart="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hello, User"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#212121" />
+
+                    <TextView
+                        android:id="@+id/textUserStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Status is Pending, Upload Document for Verification "
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/holo_orange_dark" />
+
+                    <TextView
+                        android:id="@+id/textVerifiedLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✔ Verified"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Upload Aadhaar -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Aadhaar"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/etAadhaar"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="Enter Aadhaar Number"
+                android:textColor="#2979FF"
+                android:inputType="number"
+                android:maxLength="12"
+                android:padding="12dp"
+                android:textColorHint="@color/hint_color"
+                android:background="@drawable/edittext_background" />
+
+            <Button
+                android:id="@+id/btnUploadAadhaar"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Upload"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textAadhaarStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: Not uploaded"
+            android:textSize="12sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Upload PAN -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload PAN"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/etPan"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="Enter PAN Number"
+                android:textColor="#2979FF"
+                android:maxLength="10"
+                android:padding="12dp"
+                android:textColorHint="@color/hint_color"
+                android:background="@drawable/edittext_background" />
+
+            <Button
+                android:id="@+id/btnUploadPan"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Upload"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textPanStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: Not uploaded"
+            android:textSize="12sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Address -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Full Address"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_color"
+            android:hint="Enter your full address"
+            android:background="@drawable/edittext_background" />
+
+        <!-- Pincode -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pincode"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etPincode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:hint="Enter Pincode"
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColorHint="@color/hint_color"
+            android:background="@drawable/edittext_background" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Details"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#4CAF50" />
+    </LinearLayout>
+</ScrollView>

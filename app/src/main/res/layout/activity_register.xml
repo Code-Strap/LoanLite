@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/LR_Theme"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LoanLite"
+            android:textSize="34sp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="#00B0FF"
+            android:fontFamily="@font/amaranth_bold"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Registration Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#FFFFFF"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Full Name -->
+                <EditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full name as per Aadhaar"
+                    android:textColor="@color/black"
+                    android:textColorHint="#5D5B5B"
+                    android:drawableStart="@android:drawable/ic_menu_edit"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="14dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Phone -->
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:textColor="@color/black"
+                    android:textColorHint="#5D5B5B"
+                    android:maxLength="10"
+                    android:drawableStart="@android:drawable/ic_menu_call"
+                    android:padding="14dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Gender -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Gender"
+                    android:textColor="#424242"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioGroup
+                    android:id="@+id/rgGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <RadioButton
+                        android:id="@+id/rbMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:textColor="#403E3E" />
+
+                    <RadioButton
+                        android:id="@+id/rbFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female"
+                        android:textColor="#403E3E"
+                        android:layout_marginStart="24dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other"
+                        android:textColor="#403E3E"
+                        android:layout_marginStart="24dp" />
+                </RadioGroup>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B0BEC5"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Email -->
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Address"
+                    android:textColorHint="#5D5B5B"
+                    android:textColor="@color/black"
+                    android:drawableStart="@android:drawable/ic_dialog_email"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="14dp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Password -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_edittext"
+                    android:paddingEnd="8dp"
+                    android:paddingStart="8dp"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Password"
+                        android:textColor="@color/black"
+                        android:textColorHint="#5D5B5B"
+                        android:drawableStart="@android:drawable/ic_lock_idle_lock"
+                        android:inputType="textPassword"
+                        android:padding="14dp"
+                        android:background="@android:color/transparent"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/textShowHide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show"
+                        android:textColor="#1976D2"
+                        android:textStyle="bold"
+                        android:padding="8dp"
+                        android:textSize="14sp"
+                        android:background="?attr/selectableItemBackgroundBorderless" />
+                </LinearLayout>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B0BEC5"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Age Confirmation -->
+                <CheckBox
+                    android:id="@+id/cbAgeConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I confirm I am 18 years or older"
+                    android:textColor="#D32F2F"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Register Button -->
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:backgroundTint="#00B0FF"
+                    android:padding="14dp"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Progress Bar -->
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Login Redirect -->
+                <TextView
+                    android:id="@+id/tvLoginLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already have an account? Login"
+                    android:textColor="#1976D2"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

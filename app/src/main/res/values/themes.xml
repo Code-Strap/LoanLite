@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- App splash theme for Android 11 and below -->
+    <style name="Theme.LoanLite.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item> <!-- ✅ -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- App base theme -->
+    <style name="Base.Theme.LoanLite" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/white</item> <!-- ✅ -->
+    </style>
+
+    <style name="Theme.LoanLite" parent="Base.Theme.LoanLite" />
+
+</resources>

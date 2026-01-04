@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/LR_Theme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@color/LR_Theme"
+        android:layout_marginTop="40dp">
+
+        <!-- Title -->
+        <TextView
+            android:text="Loan Repayment"
+            android:textSize="22sp"
+            android:textColor="#2E2E2E"
+            android:textStyle="bold"
+            android:background="@color/LR_Theme"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_marginTop="5dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_rawRes="@raw/scan_pay"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+
+        <!-- QR Code & Payment Details Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:padding="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- QR Code Image -->
+                <ImageView
+                    android:id="@+id/imgUpiQR"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/qr"
+                    android:padding="6dp"
+                    android:contentDescription="UPI QR Code" />
+
+                <!-- UPI ID + Copy Icon -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:id="@+id/tvUpiId"
+                        android:text="UPI ID: Q077623033@ybl"
+                        android:textSize="14sp"
+                        android:textColor="#555555"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/btnCopyUpi"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="8dp"
+                        android:clickable="true"
+                        android:contentDescription="Copy UPI ID"
+                        android:focusable="true"
+                        android:src="@drawable/ic_copy"
+                        app:tint="#555555"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+
+                <!-- Amount -->
+                <TextView
+                    android:id="@+id/tvAmount"
+                    android:text="Amount: ₹ 2,500.00"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:paddingEnd="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avoid entering! try to copy your UTR/Transaction ID"
+            android:textColor="#EFDB1313"
+            android:textStyle="bold"/>
+
+        <!-- Transaction ID Input -->
+        <EditText
+            android:id="@+id/etUtr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter UTR / Transaction ID"
+            android:background="@drawable/edittext_background"
+            android:padding="14dp"
+            android:layout_marginTop="8dp"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#888888" />
+
+        <!-- Confirm Button -->
+        <Button
+            android:id="@+id/btnConfirmPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I Have Paid"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"
+            android:textAllCaps="false"
+            android:layout_marginTop="16dp"
+            android:padding="14dp" />
+
+    </LinearLayout>
+</ScrollView>

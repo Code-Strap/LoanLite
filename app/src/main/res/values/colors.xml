@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="amber_700">#FFA000</color>
+    <color name="green_700">#388E3C</color>
+
+    // login/Register theme
+    <color name="LR_Theme">#E3F2FD</color>
+    E3F2FD
+    //hint color
+    <color name="hint_color">#B6AEAE</color>
+
+    // for mainActivity
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_700">#018786</color>
+
+    //main paynow
+    <color name="green">#4CAF50</color> <!-- Material Green 500 -->
+
+
+</resources>
